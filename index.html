@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warning Text Generator</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" type="module" defer></script>
+</head>
+
+<body>
+    <h1>Warning Text Generator</h1>
+
+    <div class="content">
+        <form id="form">
+            <div class="options">
+                <div class="box">
+                    <h2>Type</h2>
+                    <input type="text" id="type">
+                </div>
+                <div class="box">
+                    <h2>Office Code</h2>
+                    <input type="text" id="office-code">
+                </div>
+                <div class="box">
+                    <h2>Office</h2>
+                    <input type="text" id="office">
+                </div>
+                <div class="box">
+                    <h2>Office Short</h2>
+                    <input type="text" id="office-short">
+                </div>
+                <div class="box">
+                    <h2>State Code</h2>
+                    <input type="text" id="state-code">
+                </div>
+                <div class="box">
+                    <h2>Event Code</h2>
+                    <input type="text" id="event-code">
+                </div>
+                <div class="box">
+                    <h2>Counties</h2>
+                    <input type="text" id="counties">
+                </div>
+                <div class="box">
+                    <h2>Until</h2>
+                    <div class="two-inputs">
+                        <div class="two-inputs-box">
+                            <p>Hours:</p>
+                            <select class="two-inputs-item"id="until-hours">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </div>
+
+                        <div class="two-inputs-box">
+                            <p>Minutes:</p>
+                            <select class="two-inputs-item" id="until-minutes">
+                                <option value="0">0</option>
+                                <option value="15">15</option>
+                                <option value="30">30</option>
+                                <option value="45">45</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h2>Description</h2>
+                    <input type="text" id="description">
+                </div>
+                <div class="box">
+                    <h2>Hazard</h2>
+                    <input type="text" id="Hazard">
+                </div>
+                <div class="box">
+                    <h2>Source</h2>
+                    <input type="text" id="source">
+                </div>
+                <div class="box">
+                    <h2>Impact</h2>
+                    <input type="text" id="impact">
+                </div>
+                <div class="box">
+                    <h2>Impacted</h2>
+                    <input type="text" id="impacted">
+                </div>
+                <div class="box">
+                    <h2>Instructions</h2>
+                    <input type="text" id="instructions">
+                </div>
+                <div class="box">
+                    <h2>Issuer</h2>
+                    <input type="text" id="issuer">
+                </div>
+                <div class="box">
+                    <h2>Tor Possible</h2>
+                    <input type="text" id="tor-possible">
+                </div>
+                <div class="box">
+                    <h2>TOA In Effect</h2>
+                    <input type="text" id="tor-watch-in-effect">
+                </div>
+                <div class="box">
+                    <h2>Tor</h2>
+                    <input type="text" id="tor">
+                </div>
+                <div class="box">
+                    <h2>Tor Damage Threat</h2>
+                    <input type="text" id="tor-damage-threat">
+                </div>
+            </div>
+
+            <div class="box">
+                <input type="submit" id="submit" value="Generate">
+            </div>
+        </form>
+        <div class="generated-text">
+            <div class="text">
+                <pre id="generated-text-raw">
+                </pre>
+            </div>
+            <div class="text">
+                <pre id="generated-text-vt">
+                </pre>
+            </div>
+        </div>
+    </div>
+
+    <p class="credit">
+        Website by <a href="https://github.com/what-question-mark">@whatqm</a>
+    </p>
+</body>
+
+</html>

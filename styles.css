@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+    overflow: hidden;
+}
+
+h1 {
+    margin: 1em;
+    font-size: 3em;
+    text-align: center;
+}
+
+.content {
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1em;
+    margin: 3em;
+}
+
+form {
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    height: 100%;
+}
+
+.options {
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+h2 {
+    margin: 0em 1em 1em;
+    font-size: 2em;
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 75%;
+    font-size: 1em;
+    font-weight: 400;
+    background-color: whitesmoke;
+    padding: 1em;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+
+input[type="submit"] {
+    width: 75%;
+    font-size: 2em;
+    font-weight: bold;
+    background-color: #3c80ff;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.two-inputs {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    font-size: 1em;
+    font-weight: 400;
+    margin: 0 auto;
+}
+
+.two-inputs-box {
+    width: fit-content;
+}
+
+.two-inputs-item {
+    background-color: whitesmoke;
+    padding: 1em;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+
+.box {
+    height: max-content;
+    margin: 2em 1em;
+    text-align: center;
+}
+
+.generated-text {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 1em;
+}
+
+.text {
+    font-family: Consolas, monaco, monospace;
+    font-size: large;
+    overflow: scroll;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    padding: 1em;
+    height: 100%;
+}
+
+.credit {
+    margin: 1em;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.credit a {
+    margin: 0;
+}
