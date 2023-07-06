@@ -78,7 +78,40 @@
                 </div>
                 <div class="box">
                     <h2>Hazard</h2>
-                    <input type="text" id="Hazard">
+
+                    <select id="hazard">
+                        <optgroup label="Tornado">
+                            <option value="Tornado">Tornado</option>
+                            <option value="Damaging tornado">Damaging tornado</option>
+                            <option value="PDS">PDS</option>
+                            <option value="Deadly tornado">Deadly tornado</option>
+                        </optgroup>
+                        <optgroup label="Severe Thunderstorm">
+                            <optgroup label="Wind">
+                                <option value="60 mph wind speeds">60 mph</option>
+                                <option value="70 mph wind speeds">70 mph</option>
+                                <option value="80 mph wind speeds">80 mph</option>
+                                <option value="90 mph wind speeds">90 mph</option>
+                                <option value="100 mph wind speeds">100 mph</option>
+                            </optgroup>
+                            <optgroup label="Hail">
+                                <option value="Quarter size hail">Quarter</option>
+                                <option value="Half dollar size hail">Half dollar</option>
+                                <option value="Ping pong ball size hail">Ping pong ball</option>
+                                <option value="Golf ball size hail">Golf ball</option>
+                                <option value="Two inch hail">Two inch</option>
+                                <option value="Tennis ball size hail">Tennis ball</option>
+                                <option value="Baseball size hail">Baseball</option>
+                                <option value="Three inch hail">Three inch</option>
+                                <option value="Softball size hail">Softball</option>
+                                <option value="Grapefruit size hail">Grapefruit</option>
+                            </optgroup>
+                        </optgroup>
+                        <optgroup label="Flash Flood">
+                            <option value="Flash flooding caused by thunderstorms">Normal</option>
+                            <option value="Life threatening flash flooding. Heavy rain producing flash flooding">PDS</option>
+                        </optgroup>
+                    </select>
                 </div>
                 <div class="box">
                     <h2>Source</h2>
@@ -91,7 +124,6 @@
                         <option value="public">Public</option>
                         <option value="law enforcement">Law Enforcement</option>
                     </select>
-
                 </div>
                 <div class="box">
                     <h2>Impact</h2>
@@ -127,7 +159,6 @@
                             <option value="This is a PARTICULARLY DANGEROUS SITUATION. SEEK HIGHER GROUND NOW! Life-threatening flash flooding of low water crossings, small creeks and streams, urban areas, highways, streets and underpasses.">PDS</option>
                         </optgroup>
                     </select>
-                    
                 </div>
                 <div class="box">
                     <h2>Impacted</h2>
