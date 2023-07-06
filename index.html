@@ -82,11 +82,52 @@
                 </div>
                 <div class="box">
                     <h2>Source</h2>
-                    <input type="text" id="source">
+
+                    <select id="source">
+                        <option value="radar indicated">Radar Indicated</option>
+                        <option value="trained weather spotters">Trained Weather Spotters</option>
+                        <option value="broadcast media">Broadcast Media</option>
+                        <option value="emergency management">Emergency Management</option>
+                        <option value="public">Public</option>
+                        <option value="law enforcement">Law Enforcement</option>
+                    </select>
+
                 </div>
                 <div class="box">
                     <h2>Impact</h2>
-                    <input type="text" id="impact">
+                    
+                    <select id="impact">
+                        <optgroup label="Tornado">
+                            <option value="flying debris will be dangerous to those caught without shelter. Mobile homes will be damaged or destroyed. Damage to roofs, windows, and vehicles will occur. Tree damage is likely">Normal</option>
+                            <option value="YOU ARE IN A LIFE-THREATENING SITUATION. Flying debris may be deadly to those caught without shelter. Mobile homes will be destroyed. Considerable damage to homes, businesses, and vehicles is likely and complete destruction is possible">PDS</option>
+                        </optgroup>
+                        <optgroup label="Severe Thunderstorm">
+                            <optgroup label="Wind">
+                                <option value="Expect wind damage to roofs, siding, and trees.">60 mph</option>
+                                <option value="Expect considerable tree damage. Damage is likely to mobile homes, roofs, and outbuildings.">70 mph</option>
+                                <option value="Flying debris will be dangerous to those caught without shelter. Mobile homes will be heavily damaged. Expect considerable damage to roofs, windows, and vehicles. Extensive tree damage and power outages are likely.">80 mph</option>
+                                <option value="You are in a life-threatening situation. Flying debris may be deadly to those caught without shelter. Mobile homes will be heavily damaged or destroyed. Homes and businesses will have substantial roof and window damage. Expect extensive tree damage and power outages.">90 mph</option>
+                                <option value="You are in a life-threatening situation. Flying debris may be deadly to those caught without shelter. Mobile homes will be destroyed. Expect considerable damage to homes and businesses. Expect extensive tree damage and power outages.">100 mph</option>
+                            </optgroup>
+                            <optgroup label="Hail">
+                                <option value="Hail damage to vehicles is expected.">Quarter</option>
+                                <option value="Hail damage to vehicles is expected.">Half Dollar</option>
+                                <option value="People and animals outdoors will be injured. Expect hail damage to roofs, siding, windows, and vehicles.">Ping Pong</option>
+                                <option value="People and animals outdoors will be injured. Expect hail damage to roofs, siding, windows, and vehicles.">Golf Ball</option>
+                                <option value="People and animals outdoors will be injured. Expect hail damage to roofs, siding, windows, and vehicles.">Two Inch</option>
+                                <option value="People and animals outdoors will be injured. Expect hail damage to roofs, siding, windows, and vehicles.">Tennis Ball</option>
+                                <option value="People and animals outdoors will be severely injured. Expect shattered windows, extensive damage to roofs, siding, and vehicles.">Baseball</option>
+                                <option value="People and animals outdoors will be severely injured. Expect shattered windows, extensive damage to roofs, siding, and vehicles.">Three Inch</option>
+                                <option value="People and animals outdoors will be severely injured. Expect shattered windows, extensive damage to roofs, siding, and vehicles.">Softball</option>
+                                <option value="People and animals outdoors will be severely injured. Expect shattered windows, extensive damage to roofs, siding, and vehicles.">Grapefruit</option>
+                            </optgroup>
+                        </optgroup>
+                        <optgroup label="Flash Flood">
+                            <option value="Flash flooding of small creeks and streams, urban areas, highways, streets and underpasses as well as other poor drainage and low-lying areas.">Normal</option>
+                            <option value="This is a PARTICULARLY DANGEROUS SITUATION. SEEK HIGHER GROUND NOW! Life-threatening flash flooding of low water crossings, small creeks and streams, urban areas, highways, streets and underpasses.">PDS</option>
+                        </optgroup>
+                    </select>
+                    
                 </div>
                 <div class="box">
                     <h2>Impacted</h2>
@@ -101,20 +142,47 @@
                     <input type="text" id="issuer">
                 </div>
                 <div class="box">
-                    <h2>Tor Possible</h2>
-                    <input type="text" id="tor-possible">
+                    <h2>Wind Speeds</h2>
+
+                    <select id="wind-speeds">
+                        <option value="60 mph wind speeds">60 mph</option>
+                        <option value="70 mph wind speeds">70 mph</option>
+                        <option value="80 mph wind speeds">80 mph</option>
+                        <option value="90 mph wind speeds">90 mph</option>
+                        <option value="100 mph wind speeds">100 mph</option>
+                    </select>
+                </div>
+                <div class="box">
+                    <h2>Hail Size</h2>
+
+                    <select id="hail-size">
+                        <option value="quarter size hail">Quarter</option>
+                        <option value="half dollar size hail">Half Dollar</option>
+                        <option value="ping pong ball size hail">Ping Pong Ball</option>
+                        <option value="golf ball size hail">Golf Ball</option>
+                        <option value="two inch hail">Two Inch</option>
+                        <option value="tennis ball size hail">Tennis Ball</option>
+                        <option value="baseball size hail">Baseball</option>
+                        <option value="three inch hail">Three Inch</option>
+                        <option value="softball size hail">Softball</option>
+                        <option value="grapefruit size hail">Grapefruit</option>
+                    </select>
+                </div>
+                <div class="box">
+                    <h2>Tornado Possible</h2>
+                    <input type="text" id="tornado-possible">
                 </div>
                 <div class="box">
                     <h2>TOA In Effect</h2>
                     <input type="text" id="tor-watch-in-effect">
                 </div>
                 <div class="box">
-                    <h2>Tor</h2>
-                    <input type="text" id="tor">
+                    <h2>Tornado</h2>
+                    <input type="text" id="tornado">
                 </div>
                 <div class="box">
-                    <h2>Tor Damage Threat</h2>
-                    <input type="text" id="tor-damage-threat">
+                    <h2>Tornado Threat</h2>
+                    <input type="text" id="tornado-threat">
                 </div>
             </div>
 

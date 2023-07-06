@@ -77,6 +77,16 @@ input[type="submit"] {
 }
 
 .two-inputs-item {
+    width: max-content;
+    background-color: whitesmoke;
+    padding: 1em;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+
+select {
+    width: 75%;
     background-color: whitesmoke;
     padding: 1em;
     border-radius: 10px;
