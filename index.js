@@ -46,7 +46,6 @@ submitButton.addEventListener("click", function (event) {
         const hail = GetMaxHailSize(hazard);
         const wind = GetMaxWindGust(hazard);
     
-        alert("Generating text...");
         generateWarningText(
             document.getElementById("type").value,
             document.getElementById("office-code").value,
