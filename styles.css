@@ -1,11 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;600;700;800;900&display=swap");
 
+[data-color-scheme="light"] {
+    --background: white;
+    --input: whitesmoke;
+    --text: black;
+    color-scheme: light;
+}
+
+[data-color-scheme="dark"] {
+    --background: black;
+    --input: #0a0a0a;
+    --text: white;
+    color-scheme: dark;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Ubuntu", sans-serif;
     overflow: hidden;
+    color: var(--text);
+}
+
+body {
+    background-color: var(--background);
 }
 
 h1 {
@@ -44,7 +63,7 @@ input[type="text"] {
     width: 75%;
     font-size: 1em;
     font-weight: 400;
-    background-color: whitesmoke;
+    background-color: var(--input);
     padding: 1em;
     border-radius: 10px;
     outline: none;
@@ -78,7 +97,7 @@ input[type="submit"] {
 
 .two-inputs-item {
     width: max-content;
-    background-color: whitesmoke;
+    background-color: var(--input);
     padding: 1em;
     border-radius: 10px;
     outline: none;
@@ -87,7 +106,7 @@ input[type="submit"] {
 
 select {
     width: 75%;
-    background-color: whitesmoke;
+    background-color: var(--input);
     padding: 1em;
     border-radius: 10px;
     outline: none;
@@ -111,7 +130,7 @@ select {
     font-family: Consolas, monaco, monospace;
     font-size: large;
     overflow: scroll;
-    background-color: whitesmoke;
+    background-color: var(--input);
     border-radius: 20px;
     padding: 1em;
     height: 100%;

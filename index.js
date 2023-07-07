@@ -12,6 +12,15 @@ import {
     SetTime,
 } from "./src/config.js";
 
+const colourStorage = localStorage.getItem("colour");
+
+if (colourStorage == 0) {
+    document.documentElement.setAttribute("data-color-scheme", "dark");
+}
+if (colourStorage == 1) {
+    document.documentElement.setAttribute("data-color-scheme", "light");
+}
+
 const atDate =
     new Date()
         .toLocaleTimeString("en-US", {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-color-scheme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -9,10 +9,32 @@
 
     <link rel="stylesheet" href="styles.css">
     <script src="index.js" type="module" defer></script>
+    <script defer>
+        function setColour() {
+            const colourInput = document.getElementById("colour").value;
+            localStorage.setItem("colour", colourInput);
+            document.documentElement.style.overflow = "hidden";
+            document.body.clientWidth;
+            document.documentElement.style.overflow = "";
+            if (colourInput == 0) {
+                document.documentElement.setAttribute("data-color-scheme", "dark");
+            }
+            if (colourInput == 1) {
+                document.documentElement.setAttribute("data-color-scheme", "light");
+            }
+        }
+    </script>
 </head>
 
 <body>
-    <h1>Warning Text Generator</h1>
+    <h1>Warning Text Generator
+        <select style="width: fit-content;" id="colour" onchange="setColour()">
+            <option value="" disabled="" selected="">Select a Colour Theme</option>
+            <option value="0">Dark</option>
+            <option value="1">Light</option>
+        </select>
+    </h1>
+
 
     <div class="content">
         <form id="form">
