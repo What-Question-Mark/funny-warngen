@@ -1,5 +1,7 @@
 import { precautions } from "../src/config.js";
 
+const credit = `\n\nGenerated using https://what-question-mark.github.io/funny-warngen/`
+
 export async function generateWarningText(
     type,
     officeCode,
@@ -127,7 +129,7 @@ export async function generateWarningText(
             : ""
     }${eventCode === "FFW" ? `FLASH FLOOD...${tag}\n\n` : ""}${"$$"}\n\n${
         issuer ? issuer : ""
-    }`;
+    }`+credit;
 
     const vtResult = `The National Weather Service in ${office} has issued a ${event.replace(
         "Thunderstorm",
@@ -166,7 +168,7 @@ export async function generateWarningText(
         torPossible === "POSSIBLE" ? "\n\n" + precautions.svr.tor_possible : ""
     }${
         toaInEffect === "YES" ? "\n\n" + precautions.svr.tor_possible_toa : ""
-    }\n\nAVAILABLE PHONEMES TO USE...${JSON.stringify(phonemes.map((p) => p))}`;
+    }\n\nAVAILABLE PHONEMES TO USE...${JSON.stringify(phonemes.map((p) => p))}`+credit;
 
     document.getElementById(
         "generated-text-raw"

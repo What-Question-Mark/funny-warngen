@@ -1,9 +1,5 @@
-export function Add2NewLines() {
-    return "\n\n";
-}
-export function AddNewLine() {
-    return "\n";
-}
+export const AddNewLine = "\n";
+export const Add2NewLines = "\n\n";
 
 export function SetTime(date, minutes, hours) {
     date.setMinutes(date.getMinutes() + minutes);

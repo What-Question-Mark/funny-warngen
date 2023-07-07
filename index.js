@@ -53,16 +53,12 @@ submitButton.addEventListener("click", function (event) {
             document.getElementById("office").value,
             document.getElementById("office-short").value,
             document.getElementById("state-code").value,
-            document.getElementById("event-code").value,
+            document.getElementById("event-type").value,
             hail.tag || wind.tag,
             hail.size,
-            document.getElementById("source").value === sources.svr.radar
-                ? "RADAR INDICATED"
-                : "OBSERVED",
+            document.getElementById("source").value,
             wind.gust,
-            document.getElementById("source").value === sources.svr.radar
-                ? "RADAR INDICATED"
-                : "OBSERVED",
+            document.getElementById("source").value,
             JSON.parse(document.getElementById("counties").value),
             untilDate,
             atDate,
@@ -72,27 +68,28 @@ submitButton.addEventListener("click", function (event) {
             document.getElementById("impact").value,
             JSON.parse(document.getElementById("impacted").value),
             precautions.svr.default +
-                Add2NewLines() +
+                Add2NewLines +
                 precautions.svr.destructive_wind_hail +
-                Add2NewLines() +
+                Add2NewLines +
                 precautions.svr.extremely_dangerousLine +
-                Add2NewLines() +
+                Add2NewLines +
                 precautions.svr.gust_frontLine +
-                Add2NewLines() +
+                Add2NewLines +
                 precautions.svr.lightningLine +
-                Add2NewLines() +
+                Add2NewLines +
                 precautions.svr.torrential_rainfallLine +
-                Add2NewLines() +
+                Add2NewLines +
                 document.getElementById("instructions").value +
-                Add2NewLines() +
+                Add2NewLines +
                 precautions.svr.deadly_storms,
-            document.getElementById("tor-possible").value,
+            document.getElementById("tornado-possible").value,
             document.getElementById("issuer").value,
-            document.getElementById("tor-watch-in-effect").value,
-            document.getElementById("tor-damage-threat").value,
-            document.getElementById("tor").value
+            document.getElementById("toa-in-effect").value,
+            document.getElementById("tornado-threat").value,
+            document.getElementById("tornado").value
         );
     } catch (e) {
         alert(e)
+        console.error(e)
     }
 });

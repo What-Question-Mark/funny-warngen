@@ -19,39 +19,133 @@
             <div class="options">
                 <div class="box">
                     <h2>Type</h2>
-                    <input type="text" id="type">
+                    <select id="type" required>
+                        <option value="none" selected disabled hidden>
+                            Select an Option
+                        </option>
+                        <option value="ISSUE">Issue</option>
+                        <option value="UPDATE">Update</option>
+                    </select>
                 </div>
                 <div class="box">
                     <h2>Office Code</h2>
-                    <input type="text" id="office-code">
+                    <input type="text" id="office-code" required>
                 </div>
                 <div class="box">
                     <h2>Office</h2>
-                    <input type="text" id="office">
+                    <input type="text" id="office" required>
                 </div>
                 <div class="box">
                     <h2>Office Short</h2>
-                    <input type="text" id="office-short">
+                    <input type="text" id="office-short" required>
                 </div>
                 <div class="box">
                     <h2>State Code</h2>
-                    <input type="text" id="state-code">
+                    <select id="state-code" required>
+                        <option value="none" selected disabled hidden>
+                            Select an Option
+                        </option>
+                        <optgroup label="Northwest">
+                            <option value="AK">Alaska (AK)</option>
+                            <option value="ID">Idaho (ID)</option>
+                            <option value="MT">Montana (MT)</option>
+                            <option value="OR">Oregon (OR)</option>
+                            <option value="WA">Washington (WA)</option>
+                            <option value="WY">Wyoming (WY)</option>
+                        </optgroup>
+                        <optgroup label="North Central">
+                            <option value="IL">Illinois (IL)</option>
+                            <option value="IN">Indiana (IN)</option>
+                            <option value="IA">Iowa (IA)</option>
+                            <option value="KS">Kansas (KS)</option>
+                            <option value="MI">Michigan (MI)</option>
+                            <option value="MN">Minnesota (MN)</option>
+                            <option value="MO">Missouri (MO)</option>
+                            <option value="NE">Nebraska (NE)</option>
+                            <option value="ND">North Dakota (ND)</option>
+                            <option value="OH">Ohio (OH)</option>
+                            <option value="SD">South Dakota (SD)</option>
+                            <option value="WI">Wisconsin (WI)</option>
+                        </optgroup>
+                        <optgroup label="Northeast">
+                            <option value="CT">Connecticut (CT)</option>
+                            <option value="DE">Delaware (DE)</option>
+                            <option value="ME">Maine (ME)</option>
+                            <option value="MD">Maryland (MD)</option>
+                            <option value="MA">Massachusetts (MA)</option>
+                            <option value="NH">New Hampshire (NH)</option>
+                            <option value="NJ">New Jersey (NJ)</option>
+                            <option value="NY">New York (NY)</option>
+                            <option value="PA">Pennsylvania (PA)</option>
+                            <option value="RI">Rhode Island (RI)</option>
+                            <option value="VT">Vermont (VT)</option>
+                        </optgroup>
+                        <optgroup label="West Central">
+                            <option value="CO">Colorado (CO)</option>
+                            <option value="NM">New Mexico (NM)</option>
+                            <option value="OK">Oklahoma (OK)</option>
+                            <option value="TX">Texas (TX)</option>
+                        </optgroup>
+                        <optgroup label="Central">
+                            <option value="AR">Arkansas (AR)</option>
+                            <option value="LA">Louisiana (LA)</option>
+                            <option value="MS">Mississippi (MS)</option>
+                        </optgroup>
+                        <optgroup label="East Central">
+                            <option value="AL">Alabama (AL)</option>
+                            <option value="GA">Georgia (GA)</option>
+                            <option value="KY">Kentucky (KY)</option>
+                            <option value="NC">North Carolina (NC)</option>
+                            <option value="SC">South Carolina (SC)</option>
+                            <option value="TN">Tennessee (TN)</option>
+                            <option value="VA">Virginia (VA)</option>
+                            <option value="WV">West Virginia (WV)</option>
+                        </optgroup>
+                        <optgroup label="Southwest">
+                            <option value="AZ">Arizona (AZ)</option>
+                            <option value="NV">Nevada (NV)</option>
+                            <option value="UT">Utah (UT)</option>
+                        </optgroup>
+                        <optgroup label="South Central">
+                            <option value="AL">Alabama (AL)</option>
+                            <option value="FL">Florida (FL)</option>
+                            <option value="KY">Kentucky (KY)</option>
+                            <option value="LA">Louisiana (LA)</option>
+                            <option value="MS">Mississippi (MS)</option>
+                            <option value="TN">Tennessee (TN)</option>
+                        </optgroup>
+                        <optgroup label="Southeast">
+                            <option value="FL">Florida (FL)</option>
+                            <option value="GA">Georgia (GA)</option>
+                            <option value="NC">North Carolina (NC)</option>
+                            <option value="SC">South Carolina (SC)</option>
+                            <option value="VA">Virginia (VA)</option>
+                        </optgroup>
+                    </select>
+
                 </div>
                 <div class="box">
-                    <h2>Event Code</h2>
-                    <input type="text" id="event-code">
+                    <h2>Event Type</h2>
+                    <select id="event-type" required>
+                        <option value="none" selected disabled hidden>
+                            Select an Option
+                        </option>
+                        <option value="TOR">Tornado Warning (TOR)</option>
+                        <option value="SVR">Severe Thunderstorm Warning (SVR)</option>
+                        <option value="FFW">Flash Flood Warning (FFW)</option>
+                    </select>
                 </div>
                 <div class="box">
                     <h2>Counties</h2>
-                    <input type="text" id="counties">
+                    <input type="text" id="counties" required>
                 </div>
                 <div class="box">
                     <h2>Until</h2>
                     <div class="two-inputs">
                         <div class="two-inputs-box">
                             <p>Hours:</p>
-                            <select class="two-inputs-item" id="until-hours">
-                                <option value="0">0</option>
+                            <select class="two-inputs-item" id="until-hours" required>
+                                <option value="0" selected>0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -60,11 +154,10 @@
                                 <option value="6">6</option>
                             </select>
                         </div>
-
                         <div class="two-inputs-box">
                             <p>Minutes:</p>
-                            <select class="two-inputs-item" id="until-minutes">
-                                <option value="0">0</option>
+                            <select class="two-inputs-item" id="until-minutes" required>
+                                <option value="0" selected>0</option>
                                 <option value="15">15</option>
                                 <option value="30">30</option>
                                 <option value="45">45</option>
@@ -74,146 +167,179 @@
                 </div>
                 <div class="box">
                     <h2>Description</h2>
-                    <input type="text" id="description">
+                    <input type="text" id="description" required>
                 </div>
                 <div class="box">
                     <h2>Hazard</h2>
-
-                    <select id="hazard">
+                    <select id="hazard" required>
+                        <option value="none" selected disabled hidden>
+                            Select an Option
+                        </option>
                         <optgroup label="Tornado">
                             <option value="Tornado">Tornado</option>
                             <option value="Damaging tornado">Damaging tornado</option>
                             <option value="PDS">PDS</option>
                             <option value="Deadly tornado">Deadly tornado</option>
                         </optgroup>
-                        <optgroup label="Severe Thunderstorm">
-                            <optgroup label="Wind">
-                                <option value="60 mph wind speeds">60 mph</option>
-                                <option value="70 mph wind speeds">70 mph</option>
-                                <option value="80 mph wind speeds">80 mph</option>
-                                <option value="90 mph wind speeds">90 mph</option>
-                                <option value="100 mph wind speeds">100 mph</option>
-                            </optgroup>
-                            <optgroup label="Hail">
-                                <option value="Quarter size hail">Quarter</option>
-                                <option value="Half dollar size hail">Half dollar</option>
-                                <option value="Ping pong ball size hail">Ping pong ball</option>
-                                <option value="Golf ball size hail">Golf ball</option>
-                                <option value="Two inch hail">Two inch</option>
-                                <option value="Tennis ball size hail">Tennis ball</option>
-                                <option value="Baseball size hail">Baseball</option>
-                                <option value="Three inch hail">Three inch</option>
-                                <option value="Softball size hail">Softball</option>
-                                <option value="Grapefruit size hail">Grapefruit</option>
-                            </optgroup>
+                        <optgroup label="Wind">
+                            <option value="60 mph wind speeds">60 mph</option>
+                            <option value="70 mph wind speeds">70 mph</option>
+                            <option value="80 mph wind speeds">80 mph</option>
+                            <option value="90 mph wind speeds">90 mph</option>
+                            <option value="100 mph wind speeds">100 mph</option>
+                        </optgroup>
+                        <optgroup label="Hail">
+                            <option value="Quarter size hail">Quarter</option>
+                            <option value="Half dollar size hail">Half dollar</option>
+                            <option value="Ping pong ball size hail">Ping pong ball</option>
+                            <option value="Golf ball size hail">Golf ball</option>
+                            <option value="Two inch hail">Two inch</option>
+                            <option value="Tennis ball size hail">Tennis ball</option>
+                            <option value="Baseball size hail">Baseball</option>
+                            <option value="Three inch hail">Three inch</option>
+                            <option value="Softball size hail">Softball</option>
+                            <option value="Grapefruit size hail">Grapefruit</option>
                         </optgroup>
                         <optgroup label="Flash Flood">
                             <option value="Flash flooding caused by thunderstorms">Normal</option>
-                            <option value="Life threatening flash flooding. Heavy rain producing flash flooding">PDS</option>
+                            <option value="Life threatening flash flooding. Heavy rain producing flash flooding">PDS
+                            </option>
                         </optgroup>
                     </select>
                 </div>
                 <div class="box">
                     <h2>Source</h2>
-
-                    <select id="source">
-                        <option value="radar indicated">Radar Indicated</option>
-                        <option value="trained weather spotters">Trained Weather Spotters</option>
-                        <option value="broadcast media">Broadcast Media</option>
-                        <option value="emergency management">Emergency Management</option>
-                        <option value="public">Public</option>
-                        <option value="law enforcement">Law Enforcement</option>
+                    <select id="source" required>
+                        <option value="none" selected disabled hidden>
+                            Select an Option
+                        </option>
+                        <option value="RADAR INDICATED">Radar Indicated</option>
+                        <option value="TRAINED WEATHER SPOTTERS">Trained Weather Spotters</option>
+                        <option value="BROADCAST MEDIA">Broadcast Media</option>
+                        <option value="EMERGENCY MANAGEMENT">Emergency Management</option>
+                        <option value="PUBLIC">Public</option>
+                        <option value="LAW ENFORCEMENT">Law Enforcement</option>
                     </select>
                 </div>
                 <div class="box">
                     <h2>Impact</h2>
-                    
-                    <select id="impact">
+                    <select id="impact" required>
+                        <option value="none" selected disabled hidden>
+                            Select an Option
+                        </option>
                         <optgroup label="Tornado">
-                            <option value="flying debris will be dangerous to those caught without shelter. Mobile homes will be damaged or destroyed. Damage to roofs, windows, and vehicles will occur. Tree damage is likely">Normal</option>
-                            <option value="YOU ARE IN A LIFE-THREATENING SITUATION. Flying debris may be deadly to those caught without shelter. Mobile homes will be destroyed. Considerable damage to homes, businesses, and vehicles is likely and complete destruction is possible">PDS</option>
+                            <option
+                                value="flying debris will be dangerous to those caught without shelter. Mobile homes will be damaged or destroyed. Damage to roofs, windows, and vehicles will occur. Tree damage is likely">
+                                Normal</option>
+                            <option
+                                value="YOU ARE IN A LIFE-THREATENING SITUATION. Flying debris may be deadly to those caught without shelter. Mobile homes will be destroyed. Considerable damage to homes, businesses, and vehicles is likely and complete destruction is possible">
+                                PDS</option>
                         </optgroup>
-                        <optgroup label="Severe Thunderstorm">
-                            <optgroup label="Wind">
-                                <option value="Expect wind damage to roofs, siding, and trees.">60 mph</option>
-                                <option value="Expect considerable tree damage. Damage is likely to mobile homes, roofs, and outbuildings.">70 mph</option>
-                                <option value="Flying debris will be dangerous to those caught without shelter. Mobile homes will be heavily damaged. Expect considerable damage to roofs, windows, and vehicles. Extensive tree damage and power outages are likely.">80 mph</option>
-                                <option value="You are in a life-threatening situation. Flying debris may be deadly to those caught without shelter. Mobile homes will be heavily damaged or destroyed. Homes and businesses will have substantial roof and window damage. Expect extensive tree damage and power outages.">90 mph</option>
-                                <option value="You are in a life-threatening situation. Flying debris may be deadly to those caught without shelter. Mobile homes will be destroyed. Expect considerable damage to homes and businesses. Expect extensive tree damage and power outages.">100 mph</option>
-                            </optgroup>
-                            <optgroup label="Hail">
-                                <option value="Hail damage to vehicles is expected.">Quarter</option>
-                                <option value="Hail damage to vehicles is expected.">Half Dollar</option>
-                                <option value="People and animals outdoors will be injured. Expect hail damage to roofs, siding, windows, and vehicles.">Ping Pong</option>
-                                <option value="People and animals outdoors will be injured. Expect hail damage to roofs, siding, windows, and vehicles.">Golf Ball</option>
-                                <option value="People and animals outdoors will be injured. Expect hail damage to roofs, siding, windows, and vehicles.">Two Inch</option>
-                                <option value="People and animals outdoors will be injured. Expect hail damage to roofs, siding, windows, and vehicles.">Tennis Ball</option>
-                                <option value="People and animals outdoors will be severely injured. Expect shattered windows, extensive damage to roofs, siding, and vehicles.">Baseball</option>
-                                <option value="People and animals outdoors will be severely injured. Expect shattered windows, extensive damage to roofs, siding, and vehicles.">Three Inch</option>
-                                <option value="People and animals outdoors will be severely injured. Expect shattered windows, extensive damage to roofs, siding, and vehicles.">Softball</option>
-                                <option value="People and animals outdoors will be severely injured. Expect shattered windows, extensive damage to roofs, siding, and vehicles.">Grapefruit</option>
-                            </optgroup>
+                        <optgroup label="Wind">
+                            <option value="Expect wind damage to roofs, siding, and trees.">60 mph</option>
+                            <option
+                                value="Expect considerable tree damage. Damage is likely to mobile homes, roofs, and outbuildings.">
+                                70 mph</option>
+                            <option
+                                value="Flying debris will be dangerous to those caught without shelter. Mobile homes will be heavily damaged. Expect considerable damage to roofs, windows, and vehicles. Extensive tree damage and power outages are likely.">
+                                80 mph</option>
+                            <option
+                                value="You are in a life-threatening situation. Flying debris may be deadly to those caught without shelter. Mobile homes will be heavily damaged or destroyed. Homes and businesses will have substantial roof and window damage. Expect extensive tree damage and power outages.">
+                                90 mph</option>
+                            <option
+                                value="You are in a life-threatening situation. Flying debris may be deadly to those caught without shelter. Mobile homes will be destroyed. Expect considerable damage to homes and businesses. Expect extensive tree damage and power outages.">
+                                100 mph</option>
+                        </optgroup>
+                        <optgroup label="Hail">
+                            <option value="Hail damage to vehicles is expected.">Quarter</option>
+                            <option value="Hail damage to vehicles is expected.">Half Dollar</option>
+                            <option
+                                value="People and animals outdoors will be injured. Expect hail damage to roofs, siding, windows, and vehicles.">
+                                Ping Pong</option>
+                            <option
+                                value="People and animals outdoors will be injured. Expect hail damage to roofs, siding, windows, and vehicles.">
+                                Golf Ball</option>
+                            <option
+                                value="People and animals outdoors will be injured. Expect hail damage to roofs, siding, windows, and vehicles.">
+                                Two Inch</option>
+                            <option
+                                value="People and animals outdoors will be injured. Expect hail damage to roofs, siding, windows, and vehicles.">
+                                Tennis Ball</option>
+                            <option
+                                value="People and animals outdoors will be severely injured. Expect shattered windows, extensive damage to roofs, siding, and vehicles.">
+                                Baseball</option>
+                            <option
+                                value="People and animals outdoors will be severely injured. Expect shattered windows, extensive damage to roofs, siding, and vehicles.">
+                                Three Inch</option>
+                            <option
+                                value="People and animals outdoors will be severely injured. Expect shattered windows, extensive damage to roofs, siding, and vehicles.">
+                                Softball</option>
+                            <option
+                                value="People and animals outdoors will be severely injured. Expect shattered windows, extensive damage to roofs, siding, and vehicles.">
+                                Grapefruit</option>
                         </optgroup>
                         <optgroup label="Flash Flood">
-                            <option value="Flash flooding of small creeks and streams, urban areas, highways, streets and underpasses as well as other poor drainage and low-lying areas.">Normal</option>
-                            <option value="This is a PARTICULARLY DANGEROUS SITUATION. SEEK HIGHER GROUND NOW! Life-threatening flash flooding of low water crossings, small creeks and streams, urban areas, highways, streets and underpasses.">PDS</option>
+                            <option
+                                value="Flash flooding of small creeks and streams, urban areas, highways, streets and underpasses as well as other poor drainage and low-lying areas.">
+                                Normal</option>
+                            <option
+                                value="This is a PARTICULARLY DANGEROUS SITUATION. SEEK HIGHER GROUND NOW! Life-threatening flash flooding of low water crossings, small creeks and streams, urban areas, highways, streets and underpasses.">
+                                PDS</option>
                         </optgroup>
                     </select>
                 </div>
                 <div class="box">
                     <h2>Impacted</h2>
-                    <input type="text" id="impacted">
+                    <input type="text" id="impacted" required>
                 </div>
                 <div class="box">
                     <h2>Instructions</h2>
-                    <input type="text" id="instructions">
+                    <input type="text" id="instructions" required>
                 </div>
                 <div class="box">
                     <h2>Issuer</h2>
                     <input type="text" id="issuer">
                 </div>
                 <div class="box">
-                    <h2>Wind Speeds</h2>
-
-                    <select id="wind-speeds">
-                        <option value="60 mph wind speeds">60 mph</option>
-                        <option value="70 mph wind speeds">70 mph</option>
-                        <option value="80 mph wind speeds">80 mph</option>
-                        <option value="90 mph wind speeds">90 mph</option>
-                        <option value="100 mph wind speeds">100 mph</option>
-                    </select>
-                </div>
-                <div class="box">
-                    <h2>Hail Size</h2>
-
-                    <select id="hail-size">
-                        <option value="quarter size hail">Quarter</option>
-                        <option value="half dollar size hail">Half Dollar</option>
-                        <option value="ping pong ball size hail">Ping Pong Ball</option>
-                        <option value="golf ball size hail">Golf Ball</option>
-                        <option value="two inch hail">Two Inch</option>
-                        <option value="tennis ball size hail">Tennis Ball</option>
-                        <option value="baseball size hail">Baseball</option>
-                        <option value="three inch hail">Three Inch</option>
-                        <option value="softball size hail">Softball</option>
-                        <option value="grapefruit size hail">Grapefruit</option>
-                    </select>
-                </div>
-                <div class="box">
                     <h2>Tornado Possible</h2>
-                    <input type="text" id="tornado-possible">
+                    <select id="tornado-possible" required>
+                        <option value="none" selected disabled hidden>
+                            Select an Option
+                        </option>
+                        <option value="RADAR INDICATED">Yes</option>
+                        <option value="OBSERVED">NO</option>
+                    </select>
                 </div>
                 <div class="box">
                     <h2>TOA In Effect</h2>
-                    <input type="text" id="tor-watch-in-effect">
+                    <select id="toa-in-effect" required>
+                        <option value="none" selected disabled hidden>
+                            Select an Option
+                        </option>
+                        <option value="RADAR INDICATED">Yes</option>
+                        <option value="OBSERVED">NO</option>
+                    </select>
                 </div>
                 <div class="box">
                     <h2>Tornado</h2>
-                    <input type="text" id="tornado">
+                    <select id="tornado">
+                        <option value="none" selected disabled hidden>
+                            Select an Option
+                        </option>
+                        <option value="RADAR INDICATED">Radar Indicated</option>
+                        <option value="OBSERVED">Observed</option>
+                    </select>
                 </div>
                 <div class="box">
                     <h2>Tornado Threat</h2>
-                    <input type="text" id="tornado-threat">
+                    <select id="tornado-threat">
+                        <option value="none" selected disabled hidden>
+                            Select an Option
+                        </option>
+                        <option value="NONE">None</option>
+                        <option value="CONSIDERABALE">Considerable</option>
+                        <option value="CATASTROPHIC">Catastrophic</option>
+                    </select>
                 </div>
             </div>
 
