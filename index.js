@@ -49,9 +49,7 @@ submitButton.addEventListener("click", function (event) {
     event.preventDefault();
 
     try {
-        const hazard =
-            hazards.svr.wind.hundred + " and " + hazards.svr.hail.softball;
-    
+        const hazard = document.getElementById("hazard").value;
         const hail = GetMaxHailSize(hazard);
         const wind = GetMaxWindGust(hazard);
     
@@ -75,21 +73,7 @@ submitButton.addEventListener("click", function (event) {
             document.getElementById("source").value,
             document.getElementById("impact").value,
             JSON.parse(document.getElementById("impacted").value),
-            precautions.svr.default +
-                Add2NewLines +
-                precautions.svr.destructive_wind_hail +
-                Add2NewLines +
-                precautions.svr.extremely_dangerousLine +
-                Add2NewLines +
-                precautions.svr.gust_frontLine +
-                Add2NewLines +
-                precautions.svr.lightningLine +
-                Add2NewLines +
-                precautions.svr.torrential_rainfallLine +
-                Add2NewLines +
-                document.getElementById("instructions").value +
-                Add2NewLines +
-                precautions.svr.deadly_storms,
+            precautions.svr.default + document.getElementById("instructions").value,
             document.getElementById("tornado-possible").value,
             document.getElementById("issuer").value,
             document.getElementById("toa-in-effect").value,
